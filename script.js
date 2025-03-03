@@ -7,9 +7,19 @@ let string ='';
 buttonArray.forEach(btn => {
 
     btn.addEventListener ('click',(e)=>{
-        string += e.target.innerHTML;
-        display.value = string;
 
+          if(e.target.innerHTML == "DEL"){
+            string = string.substring(0,string.length-1);
+            display.value = string;
+
+          }
+          else{
+            string += e.target.innerHTML;
+            display.value = string;
+           
+          }
+
+       
 
     });
 
